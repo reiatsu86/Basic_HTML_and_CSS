@@ -1,0 +1,11 @@
+html{
+    font-family: sans-serif, Arial, Helvetica;
+    font-size: 10px;
+}
+
+form .fruit{
+    width: 100px;
+    margin: 10px;
+    border: 2px double red;
+    border-radius: 3px;
+}
