@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    
+    .navbar {
+        overflow: hidden;
+        background-color: darkolivegreen;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .navbar a{
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        fontsize: 17px;
+    }
+
+    .navbar a:hover{
+        background: greenyellow;
+        color:hotpink;
+    }
+    
+    .main {
+        padding: 16px;
+        margin-top: 30px;
+        height: 1500px;
+    }
+    
+    img {
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        filter: hue-rotate(90deg);
+        border: 2px solid green;
+        padding: 10px;
+        border-radius: 50px 20px;
+    }
+
+    div.a {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    table{
+        font-family: arial, sans-serif;
+        width:100%;  
+        border: 1px solid #aaaaaa;
+    }
+
+    td, th{
+        border: 1px solid;
+        text-align: left;
+        padding: 8px;
+        }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    th{
+        background-color: aquamarine;
+    }
+
+    .container{
+        position: relative;
+        text-align: center;
+        color:navy;
+    }
+    .centered{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .overlay {
+        position: absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color:mediumpurple;
+    }
+    .container:hover .overlay {
+        opacity: 1;
+    }
+
+    .text{
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top:50%;
+        left:50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(50%, 50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: 300px;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    h2{
+        color:indigo;
+    }
+
+    p:hover{
+        color:maroon
+    }
+
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#Contact">Contact</a>
+    </div>
+
+    <div class="main">
+        <p>To center an image, set left and right margin to auto, and make it
+            into a block element.</p>
+        <div class="container">
+            <img src="./images/planets.jpg" alt="planet" style="width:90%;">
+            <div class="centered">Solar System</div>
+            <div class="overlay">
+                <div class="text">BOOM</div>
+            </div>
+        </div>
+        
+        <h2>Table of Wonder</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Parent</th>
+                <th>Location</th>
+            </tr>
+            <tr>
+                <td>Poppy</td>
+                <td>Laarni</td>
+                <td>SLC</td>
+            </tr>
+            <tr>
+                <td>Pi&booster</td>
+                <td>Steven</td>
+                <td>Taylorsville</td>
+            </tr>
+            <tr>
+                <td>Mocha</td>
+                <td>Barbara</td>
+                <td>Portland</td>
+            </tr>
+        </table>
+
+        <div class="row">
+            <div class="column" style= "background-color:#aaa;">
+                <h2> Column 1</h2>
+                <p> Hello</p>
+            </div>
+            <div class="column" style= "background-color: indianred;">
+                <h2> Column 2</h2>
+                <p>World</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <video width="320" hieght="240" controls muted autoplay loop>
+            <source src="Pexels Videos 2558530.mp4" type="video/mp4">
+        </video>
+        <div class="centered">Jelly Fish</div>
+    </div>
+    <footer>
+       <div class="a">
+        <p>Steven Nunez &copy</p>
+        </div>
+    </footer>
+</body>
+</html>
