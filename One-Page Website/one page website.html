@@ -1,39 +1,94 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" href="CSS/one_page_website.css">
-	</head>
-	
-	<body>
-		<h1>ALL DOGS ARE PERFECT</h1>
-		
-		<!--Pictures-->
-		<section>
-			<h2>Photos of Dogs</h2>
-			<img src="dog_1.jpg" alt="German Shepard">
-			<img src="dog_2.jpg" alt="Multiple Dogs">
-			<img src="dog_3.jpg" alt="Yorkie">
-		<!--Pictures-->
-		</section>
-		
-		<!--Video-->
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/28xjtYY3V3Q"
-		frameborder="0" title="Top 10 Funny and Cute Dog Videos" allow="accelerometer; 
-		autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		<!--Video-->
-		
-		<form action="" method="post">
-			<input class="fruit" type="text" Value="First name">
-			<input class="fruit" type="text" value="Last name">
-			<input class="fruit" type="text" value="Phone number">
-			<input class="fruit" type="text" value="Pets name">
-			<input type="submit" value="Submit">
-		</form>
+<head>
+	<link rel="stylesheet" href="CSS/one_page_website.css">
+</head>
 
-		<footer>
-			<h4>Steven's Page&copy </h4>
-		</footer>
-	</body>
+<body>
+	<h1>ALL DOGS ARE PERFECT</h1>
+	<!-- <section>	 -->
+		<!--Pictures-->
+		<h2>Photos of Dogs</h2>
+
+				<!-- Images used to open the lightbox -->
+		<div class="row">
+			<div class="column">
+				<img src="dog_1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+			</div>
+			<div class="column">
+				<img src="dog_2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+			</div>
+			<div class="column">
+				<img src="dog_3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+			</div>
+		</div>
+
+		<!-- The Modal/Lightbox -->
+		<div id="myModal" class="modal">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+			<div class="modal-content">
+
+				<div class="mySlides">
+					<div class="numbertext">1 / 3</div>
+					<img src="dog_1.jpg" style="width:100%">
+				</div>
+			
+				<div class="mySlides">
+					<div class="numbertext">2 / 3</div>
+					<img src="dog_2.jpg" style="width:100%">
+				</div>
+			
+				<div class="mySlides">
+					<div class="numbertext">3 / 3</div>
+					<img src="dog_3.jpg" style="width:100%">
+				</div>
+			
+				<!-- Next/previous controls -->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			
+				<!-- Caption text -->
+				<div class="caption-container">
+					<p id="caption"></p>
+				</div>
+
+				<!-- Thumbnail image controls -->
+				<!-- Fix: added demo class to column to adjust width on these separately -->
+				<div class="column demo">
+					<img class="demo" src="dog_1.jpg" onclick="currentSlide(1)" alt="Single">
+				</div>
+
+				<div class="column demo">
+					<img class="demo" src="dog_2.jpg" onclick="currentSlide(2)" alt="Four">
+				</div>
+
+				<div class="column demo">
+					<img class="demo" src="dog_3.jpg" onclick="currentSlide(3)" alt="Pup">
+				</div>
+
+			</div>
+		</div>
+	<!-- </section> -->
+	
+	<!--Video-->
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/28xjtYY3V3Q"
+	frameborder="0" title="Top 10 Funny and Cute Dog Videos" allow="accelerometer; 
+	autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<!--Video-->
+	
+	<form action="" method="post">
+		<input class="fruit" type="text" Value="First name">
+		<input class="fruit" type="text" value="Last name">
+		<input class="fruit" type="text" value="Phone number">
+		<input class="fruit" type="text" value="Pets name">
+		<input type="submit" value="Submit">
+	</form>
+
+	<script src="Js/one_page_website.js"></script>
+	<footer>
+		<h4>Steven's Page&copy </h4>
+	</footer>
+</body>
 </html>
 
 
